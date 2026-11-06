@@ -78,6 +78,8 @@ a { color: inherit; }
   background: var(--sky-light); color: var(--black); font-size: 11px; font-weight: 900; display: flex; align-items: center; justify-content: center; }
 .doc ol li p { margin: 0; }
 .doc strong { font-weight: 700; color: var(--black); }
+.doc a.tracker-link { color: var(--black); font-weight: 700; text-decoration: underline; text-decoration-color: var(--sky); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.doc a.tracker-link:hover { background: var(--sky-light); }
 
 .info-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0 18px; }
 .info-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--white); }
@@ -91,6 +93,11 @@ a { color: inherit; }
 .info-table tbody tr:nth-child(even) { background: var(--white); }
 .info-table td { padding: 11px 14px; border-bottom: 1px solid var(--gray-border); vertical-align: top; line-height: 1.5; }
 .info-table td:first-child { font-weight: 700; }
+.info-table td.note-cell { background: #EEF8FF !important; font-weight: 400; color: #333; }
+.info-table.yesno th, .info-table.yesno td { width: 50%; }
+.info-table.yesno thead th { color: var(--sky); }
+.info-table.yesno td:first-child { font-weight: 400; }
+.info-table td.note-cell:empty { background: inherit !important; }
 
 /* Index links */
 .doc-links { display: flex; flex-direction: column; gap: 10px; }
@@ -136,6 +143,11 @@ a { color: inherit; }
   <a class="doc-link" href="studio-commission-policy.html">
     <div class="num">01</div>
     <div class="text"><div class="title">Sales Commission Policy</div><div class="meta">STRONG Pilates Bankstown, Castle Hill, Leppington, Wetherill Park and Penrith — Effective 2 November 2026</div></div>
+    <div class="arr">&rsaquo;</div>
+  </a>
+  <a class="doc-link" href="https://docs.google.com/spreadsheets/d/12YLMOq8IGf7TrIa5glhNllWUZ60TXdTeEBhAjhZivWQ/edit" target="_blank" rel="noopener">
+    <div class="num">02</div>
+    <div class="text"><div class="title">Studio Sales Tracker</div><div class="meta">One sheet for all five studios. Trainers, front of house and customer care enter their own sales on the This Month tab. Monthly Summary and Settings are Sales Director only.</div></div>
     <div class="arr">&rsaquo;</div>
   </a>
 </div></div>

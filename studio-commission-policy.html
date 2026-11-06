@@ -78,6 +78,8 @@ a { color: inherit; }
   background: var(--sky-light); color: var(--black); font-size: 11px; font-weight: 900; display: flex; align-items: center; justify-content: center; }
 .doc ol li p { margin: 0; }
 .doc strong { font-weight: 700; color: var(--black); }
+.doc a.tracker-link { color: var(--black); font-weight: 700; text-decoration: underline; text-decoration-color: var(--sky); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.doc a.tracker-link:hover { background: var(--sky-light); }
 
 .info-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0 18px; }
 .info-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--white); }
@@ -91,6 +93,11 @@ a { color: inherit; }
 .info-table tbody tr:nth-child(even) { background: var(--white); }
 .info-table td { padding: 11px 14px; border-bottom: 1px solid var(--gray-border); vertical-align: top; line-height: 1.5; }
 .info-table td:first-child { font-weight: 700; }
+.info-table td.note-cell { background: #EEF8FF !important; font-weight: 400; color: #333; }
+.info-table.yesno th, .info-table.yesno td { width: 50%; }
+.info-table.yesno thead th { color: var(--sky); }
+.info-table.yesno td:first-child { font-weight: 400; }
+.info-table td.note-cell:empty { background: inherit !important; }
 
 /* Index links */
 .doc-links { display: flex; flex-direction: column; gap: 10px; }
@@ -138,38 +145,40 @@ a { color: inherit; }
 <h2 id="1-who-this-applies-to">1. Who this applies to</h2>
 <p>This policy applies to trainers, front of house and customer care staff at STRONG Pilates Bankstown, Castle Hill, Leppington, Wetherill Park and Penrith.</p>
 <p>It sets out what you are paid when you sell a membership or pack. It does not change your pay rate or the terms of your employment or contractor agreement.</p>
-<p>This commission is a trial. It will be reviewed to assess whether it is feasible and whether it is effective in driving growth for the studios. See section 9.</p>
+<p>This commission is a trial. It will be reviewed to check that it is sustainable for the business and practical for the team day to day. See section 10.</p>
 <p>The Membership Sales Consultant is paid under a separate policy. Their commission does not reduce yours, except for packs as set out in section 2.</p>
 <h2 id="2-what-earns-commission-and-how-much">2. What earns commission and how much</h2>
-<div class="info-table-wrap"><table class="info-table"><thead><tr><th>Sale</th><th>Commission</th></tr></thead><tbody><tr><td>New recurring membership processed by you</td><td>$25 per membership</td></tr><tr><td>Class pack or sauna pack sold by you (new or renewal)</td><td>10% of the price paid</td></tr><tr><td>Class pack or sauna pack sold by you where the Membership Sales Consultant also qualifies for the sale</td><td>5% of the price paid</td></tr><tr><td>Monthly bonus: 5 or more approved memberships in a calendar month</td><td>$50, once per month</td></tr></tbody></table></div>
+<div class="info-table-wrap"><table class="info-table"><thead><tr><th>Sale</th><th>Commission</th></tr></thead><tbody><tr><td>New recurring membership credited to you</td><td>$25 per membership</td></tr><tr><td>Class pack or sauna pack sold by you (new or renewal)</td><td>10% of the price paid</td></tr><tr><td>Class pack or sauna pack sold by you where the Membership Sales Consultant also qualifies for the sale</td><td>5% of the price paid</td></tr><tr><td>Monthly bonus: 5 or more approved memberships in a calendar month</td><td>$50, once per month</td></tr></tbody></table></div>
 <p>All amounts are inclusive of super. For contractors the amount is added to your invoice and is inclusive of GST.</p>
 <p>No commission is paid on intro offers, casual classes, changes to an existing membership, or a membership that is put back on after being suspended.</p>
 <h2 id="3-when-a-sale-qualifies">3. When a sale qualifies</h2>
-<p>One person is credited per sale. Sales are not split. A customer who leaves without signing up does not yet count as a sale for anyone. Whoever signs them up later is credited.</p>
-<p><strong>Trainers.</strong> A membership or pack qualifies when:</p>
-<ol><li><p>Your code is used — at any time. You do not need to be there.</p></li><li><p>The customer signs up in the app with you before they leave.</p></li><li><p>You bring the customer to the desk and front of house signs them up and tags you in the tracker.</p></li><li><p>You list it in your end-of-shift report because you cannot put it through yourself (non-standard pricing, friends and family). Front of house or the Membership Sales Consultant signs them up on next contact and tags you.</p></li></ol>
-<p><strong>Front of house.</strong> A membership or pack qualifies when:</p>
-<ol><li><p>Your code is used — at any time.</p></li><li><p>The customer signs up with you at the desk. If a trainer brought them over ready to sign up, tag the trainer; it qualifies for the trainer.</p></li><li><p>The customer calls the studio during your shift and you sign them up on that call.</p></li><li><p>The customer signs up in the app with you in the studio.</p></li></ol>
-<p><strong>Customer care.</strong> A membership or pack qualifies when a customer calls or enquires through the system or email and you sign them up on that contact.</p>
-<p><strong>Leads and trial clients.</strong> New leads and trial clients are the Membership Sales Consultant&#39;s to follow up, including on the days they are not working. Do not call or message them about membership. If one of them comes to you — in the studio, by phone, or by message or email — and signs up on that contact, it qualifies for you, and the Membership Sales Consultant&#39;s commission is not affected. If they do not sign up on that contact, do not follow up. Pass it to the Membership Sales Consultant with what you know, and let them know when you have signed one of their leads up so they stop following up.</p>
-<h2 id="4-when-a-sale-counts">4. When a sale counts</h2>
+<p>Within the studio team, one person is credited per sale; sales are not split between studio team members. The Membership Sales Consultant may also be credited on the same sale under their own policy (see section 1). A customer who leaves without signing up is not yet a sale. A membership or pack qualifies for you in the cases listed under your role below.</p>
+<p><strong>Everyone enters their own sales in the <a class="tracker-link" href="https://docs.google.com/spreadsheets/d/12YLMOq8IGf7TrIa5glhNllWUZ60TXdTeEBhAjhZivWQ/edit" target="_blank" rel="noopener">Studio Sales Tracker</a>, with no exceptions, and notes each one in their end-of-shift report.</strong></p>
+<div class="info-table-wrap"><table class="info-table"><thead><tr><th>Trainers</th><th>Note</th></tr></thead><tbody><tr><td>1. You talked through membership options with the customer and gave them your code. They sign up using your code, at any time.</td><td class="note-cell">→ Confirm they signed up: check with the customer, or ask front of house or the Membership Sales Consultant privately or in the team chat. Then enter it in the tracker and your end-of-shift report.</td></tr><tr><td>2. The customer signs up in the app with you before they leave.</td><td></td></tr><tr><td>3. After talking with you, the customer confirms they want to sign up. You bring them to front of house, who enter the membership for you.</td><td class="note-cell">→ Check with front of house that they completed the sign-up. Then enter it in the tracker yourself.</td></tr><tr><td>4. The customer confirms they want to sign up, but you can&#39;t put it through yourself.</td><td class="note-cell">→ For example a special rate, 1 week free or other non-standard pricing. @ the Membership Sales Consultant in your end-of-shift report on WhatsApp with the reason. They sign the customer up and confirm with you. Enter it in the tracker once they confirm.</td></tr></tbody></table></div>
+<div class="info-table-wrap"><table class="info-table"><thead><tr><th>Front of house</th><th>Note</th></tr></thead><tbody><tr><td>1. You talked through membership options with the customer and gave them your code. They sign up using your code, at any time.</td><td class="note-cell">→ Check in the studio system that they signed up. Then enter it in the tracker and your end-of-shift report.</td></tr><tr><td>2. The customer signs up with you at the desk.</td><td class="note-cell">→ If a trainer brought them over ready to sign up, it is the trainer&#39;s sale. The trainer enters it.</td></tr><tr><td>3. The customer calls the studio phone during your shift and you sign them up on that call.</td><td class="note-cell">→ Make sure the studio phone is set up to receive incoming calls. Contact management if you are unsure or want to test incoming calls.</td></tr><tr><td>4. The customer signs up in the app with you in the studio.</td><td></td></tr></tbody></table></div>
+<div class="info-table-wrap"><table class="info-table"><thead><tr><th>Customer care</th><th>Note</th></tr></thead><tbody><tr><td>1. A customer calls or enquires through the system or email, and you sign them up in that conversation.</td><td class="note-cell">→ This includes follow-up contact in the same conversation thread.</td></tr></tbody></table></div>
+<h2 id="4-replying-to-membership-and-class-pack-enquiries">4. Replying to membership and class pack enquiries (front of house and customer care)</h2>
+<p><strong>Is the customer replying to a message from the Membership Sales Consultant?</strong></p>
+<div class="info-table-wrap"><table class="info-table yesno"><thead><tr><th>Yes</th><th>No</th></tr></thead><tbody><tr><td>Tell them the Membership Sales Consultant will get back to them. Do not answer the enquiry.</td><td>Handle the enquiry as normal.</td></tr><tr><td>If the customer says they want to sign up, sign them up. It qualifies for you.</td><td>If they sign up with you, it qualifies for you.</td></tr></tbody></table></div>
+<p>Note every membership or class pack enquiry in your end-of-shift report.</p>
+<h2 id="5-when-a-sale-counts">5. When a sale counts</h2>
 <p>A sale counts in the month the customer&#39;s first payment is received. A membership that is set up but not yet paid is pending, not a sale.</p>
 <p>The monthly bonus is counted on approved memberships with a first payment in that calendar month.</p>
-<h2 id="5-recording-sales">5. Recording sales</h2>
-<p>Every sale is entered in the Studio Sales Tracker on the day it is made: date, customer, studio, package, who processed it and, if a trainer is to be credited, the trainer&#39;s name.</p>
+<h2 id="6-recording-sales">6. Recording sales</h2>
+<p>Every sale is entered in the <a class="tracker-link" href="https://docs.google.com/spreadsheets/d/12YLMOq8IGf7TrIa5glhNllWUZ60TXdTeEBhAjhZivWQ/edit" target="_blank" rel="noopener">Studio Sales Tracker</a> by the person credited, as soon as the sign-up is confirmed: date, customer, studio, package and how it qualified.</p>
 <p>A sale that is not in the tracker when the month is approved is not paid for that month.</p>
-<h2 id="6-how-and-when-commission-is-paid">6. How and when commission is paid</h2>
+<h2 id="7-how-and-when-commission-is-paid">7. How and when commission is paid</h2>
 <p>Commission is calculated monthly from the tracker and the studio system, reviewed and approved by the Sales Director, and paid two to three weeks after the end of the month.</p>
 <p>Employees are paid through payroll. Contractors add the approved amount to their next invoice.</p>
-<h2 id="7-cancellations-and-refunds">7. Cancellations and refunds</h2>
+<h2 id="8-cancellations-and-refunds">8. Cancellations and refunds</h2>
 <p>If a sale is cancelled or refunded before the month is approved, no commission is paid on it.</p>
 <p>If a membership is cancelled or refunded after commission has been paid and the member did not complete four weeks, the commission is deducted from your next commission payment.</p>
 <p>If a pack is refunded after commission has been paid, the commission is deducted from your next commission payment.</p>
 <p>The monthly bonus is not deducted once paid.</p>
-<h2 id="8-disputes">8. Disputes</h2>
+<h2 id="9-disputes">9. Disputes</h2>
 <p>If you believe a sale has been credited incorrectly, raise it in writing with the Sales Director within seven days of the monthly commission list being issued. It will be decided from the tracker and the studio system. The Sales Director&#39;s decision is final.</p>
-<h2 id="9-changes-to-this-policy">9. Changes to this policy</h2>
-<p>This commission is a trial. The policy will be reviewed after three months to assess whether it is feasible and whether it is effective in driving growth for the studios. It may be changed, including the amounts and the addition of other bonuses, with two weeks&#39; written notice. Changes apply to sales made from the date they take effect.</p>
+<h2 id="10-changes-to-this-policy">10. Changes to this policy</h2>
+<p>This commission is a trial. The policy will be reviewed after three months to check that it is sustainable for the business and practical for the team day to day. It may be changed, including the amounts and the addition of other bonuses, with two weeks&#39; notice given through any of the company&#39;s communication channels (for example email, WhatsApp or a team meeting). Changes apply to sales made from the date they take effect.</p>
 </div></div>
 </body>
 </html>
