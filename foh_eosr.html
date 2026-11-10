@@ -35,7 +35,10 @@ body { font-family: 'Montserrat', sans-serif; background: var(--gray-light); col
 button { font-family: inherit; }
 
 /* --- TOP BAR --- */
-.topbar { position: fixed; top: 0; left: 0; right: 0; height: var(--topbar-h); background: var(--black); display: flex; align-items: center; justify-content: space-between; padding: 0 16px 0 20px; z-index: 1000; border-bottom: 2px solid var(--sky); }
+.home-btn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid #2a2a2a; background: #111; color: var(--white); display: flex; align-items: center; justify-content: center; flex-shrink: 0; text-decoration: none; transition: all var(--transition, 0.2s ease); margin-right: 2px; }
+.home-btn:hover { border-color: var(--sky); color: var(--sky); }
+.home-btn svg { width: 16px; height: 16px; }
+.topbar { position: fixed; top: 0; left: 0; right: 0; height: var(--topbar-h); background: var(--black); display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px 0 14px; z-index: 1000; border-bottom: 2px solid var(--sky); }
 .topbar-brand { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; }
 .topbar-brand .wordmark { font-family: 'Kessel Heavy', sans-serif; font-size: 22px; color: var(--sky); letter-spacing: 3px; line-height: 1.2; flex-shrink: 0; }
 .topbar-brand .doc-name { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-mid); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
@@ -144,12 +147,18 @@ button { font-family: inherit; }
 .reset-btn:hover { background: var(--sky); color: var(--black); }
 </style>
 <style>
+.seg { display: flex; gap: 0; margin-top: 18px; border: 1px solid #333; border-radius: 2px; overflow: hidden; max-width: 420px; }
+.seg-btn { flex: 1; background: #111; color: #777; border: none; padding: 14px 10px; font-family: 'Kessel Heavy', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.2s ease; }
+.seg-btn + .seg-btn { border-left: 1px solid #333; }
+.seg-btn:hover { color: var(--white); }
+.seg-btn.on { background: var(--sky); color: var(--black); }
 .eosr-intro { font-size: 13.5px; line-height: 1.7; color: #333; margin: 20px 0 6px; }
 .content .copy-block { margin-top: 16px; font-size: 13px; }
 </style>
 </head>
 <body>
 <div class="topbar">
+<a class="home-btn" href="index.html" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M10 20v-5h4v5"/></svg></a>
   <a class="topbar-brand" href="index.html" style="text-decoration:none;">
     <div class="wordmark">STRONG</div>
     <div class="doc-name">End of Shift Reports</div>
@@ -168,7 +177,8 @@ button { font-family: inherit; }
     <span class="loc-arr">▾</span>
     <div class="tb-menu" id="locMenu2"></div>
   </div>
-  <div class="section-meta"><div class="meta-pill btn" id="roleFoh" onclick="setRole('foh')">FOH</div><div class="meta-pill btn" id="roleTrainer" onclick="setRole('trainer')">Trainer</div><div class="meta-pill btn" onclick="location.href='foh_daily_checklist.html'">Open daily checklist</div></div>
+  <div class="seg" role="tablist"><button class="seg-btn" id="roleFoh" onclick="setRole('foh')">FOH Report</button><button class="seg-btn" id="roleTrainer" onclick="setRole('trainer')">Trainer Report</button></div>
+  <div class="section-meta"><div class="meta-pill btn" onclick="location.href='foh_daily_checklist.html'">Open daily checklist</div></div>
 </div>
 <div class="content">
   <p class="eosr-intro" id="intro"></p>
@@ -185,8 +195,8 @@ function render() {
   document.getElementById('locTitle').textContent = LOCS[loc];
   const menu = Object.keys(LOCS).map(k => '<div class="' + (k===loc?'sel':'') + '" onclick="setLoc(\'' + k + '\')">' + LOCS[k] + '</div>').join('');
   document.getElementById('locMenu').innerHTML = menu; document.getElementById('locMenu2').innerHTML = menu;
-  document.getElementById('roleFoh').className = 'meta-pill btn' + (role==='foh' ? ' highlight' : '');
-  document.getElementById('roleTrainer').className = 'meta-pill btn' + (role==='trainer' ? ' highlight' : '');
+  document.getElementById('roleFoh').className = 'seg-btn' + (role==='foh' ? ' on' : '');
+  document.getElementById('roleTrainer').className = 'seg-btn' + (role==='trainer' ? ' on' : '');
   document.getElementById('intro').textContent = INTRO[role];
   const t = role === 'trainer' ? TPL.trainer : TPL[loc === 'leppington' ? 'leppington' : loc === 'penrith' ? 'penrith' : 'standard'];
   const label = role === 'trainer' ? 'Trainer EOSR template' : 'FOH EOSR template — ' + LOCS[loc];
